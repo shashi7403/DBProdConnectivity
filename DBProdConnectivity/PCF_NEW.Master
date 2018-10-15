@@ -1,0 +1,116 @@
+﻿<%@ master language="C#" autoeventwireup="true" codebehind="PCF_NEW.master.cs" inherits="DBProdConnectivity.PCF_NEW" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11,chrome=1" />
+    <title>DF</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="~/StyleSheets/main.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="~/StyleSheets/Site.css" media="all" />
+    <asp:ContentPlaceHolder ID="headContents" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="masthead">
+            <div class="masthead_content ">
+                <div class="masthead_row1">
+                    <div class="utility_nav">
+                        <%-- <asp:Label ID="lblLoggedInUser" runat="server" CssClass="text-normal"></asp:Label>--%>
+                        <asp:LoginName ID="LoginName1" FormatString="(Welcome {0})" CssClass="loginname" runat="server" />
+                        <asp:Label ID="lblCurrentDateTime" runat="server" CssClass="text-normal"></asp:Label>
+                    </div>
+                    <div class="masthead_row2">
+                        <div class="dell_logo">
+                        </div>
+                        <div class="masthead_row2a">
+                            <div class="title">
+                                DEE/LKM Portal
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div><a href="<%= Page.ResolveUrl("~/CBRQuery.aspx") %>">DB Connectivity</a></div>
+                                    </td>
+                                    <td>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   
+                                    </td>
+                                    
+                                    <td>
+                                        <div><a href="<%= Page.ResolveUrl("~/PostUrl.aspx") %>">POST URL</a></div>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            <div class="menu_contain">
+                                <div class="clear hideSkiplink">
+                                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="menu" EnableViewState="false"
+                                        IncludeStyleBlock="false">
+                                    </asp:Menu>
+                                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" clear_div">
+            </div>
+        </div>
+        <div class="content_bkgd">
+            <div class=" container">
+                <div class="main_content_box">
+                    <div class="main_content_box_top">
+                        <div class="tl">
+                        </div>
+                        <div class="tr">
+                        </div>
+                    </div>
+                    <div class="main_content_box_content">
+                        <div class="page_content">
+                            <asp:ContentPlaceHolder ID="BodyContents" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <div class="main_content_box_bottom">
+                        <div class="bl">
+                        </div>
+                        <div class="br">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear_div">
+            </div>
+        </div>
+        <div class="site_footer">
+            <ul class="footer_links">
+                <li><a href="#" class="first">©2013 Dell</a></li>
+                <%--   <li><a href="#">Legal</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Trademarks</a></li>
+            <li><a href="#">Privacy Statement</a></li>
+            <li><a href="#">Dell Service Contracts</a></li>--%>
+            </ul>
+            <!--  END MANDATORY FOOTER INFORMATION  -->
+        </div>
+        <div class="div_clear">
+            <table valign="Bottom" align="right">
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+
